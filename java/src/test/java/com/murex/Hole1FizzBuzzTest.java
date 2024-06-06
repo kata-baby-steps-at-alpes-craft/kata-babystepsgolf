@@ -32,12 +32,6 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class Hole1FizzBuzzTest {
 
-    @ParameterizedTest
-    @MethodSource("provideFizzBuzzCases")
-    void testFizzBuzz(int input, String expected) {
-        assertEquals(expected, Hole1FizzBuzz.fizzBuzz(input));
-    }
-
     private static Stream<Arguments> provideFizzBuzzCases() {
         return Stream.of(
                 Arguments.of(1, "1"),
@@ -56,21 +50,27 @@ public class Hole1FizzBuzzTest {
         );
     }
 
-    @ParameterizedTest
-    @MethodSource("provideFizzBuzzBazzCases")
-    void testFizzBuzzBazz(int input, String expected) {
-        assertEquals(expected, Hole1FizzBuzz.fizzBuzz(input));
-    }
-
     private static Stream<Arguments> provideFizzBuzzBazzCases() {
         return Stream.of(
 //                Arguments.of(105, "FizzBuzzBazz"),
 //                Arguments.of(35, "BuzzBazz"),
 //                Arguments.of(21, "FizzBazz"),
 //                Arguments.of(14, "Bazz"),
-//                Arguments.of(7, "Bazz"),
+                Arguments.of(7, "Bazz"),
                 Arguments.of(1, "1")
         );
+    }
+
+    @ParameterizedTest
+    @MethodSource("provideFizzBuzzCases")
+    void testFizzBuzz(int input, String expected) {
+        assertEquals(expected, Hole1FizzBuzz.fizzBuzz(input));
+    }
+
+    @ParameterizedTest
+    @MethodSource("provideFizzBuzzBazzCases")
+    void testFizzBuzzBazz(int input, String expected) {
+        assertEquals(expected, Hole1FizzBuzz.fizzBuzz(input));
     }
 }
 
