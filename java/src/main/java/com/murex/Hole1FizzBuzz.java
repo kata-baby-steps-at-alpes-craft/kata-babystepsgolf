@@ -27,20 +27,16 @@ public class Hole1FizzBuzz {
         String accumulator = "";
         if (number % 15 == 0) {
             accumulator = "FizzBuzz";
-            return "FizzBuzz";
         } else if (number % 3 == 0) {
             accumulator = "Fizz";
-            return "Fizz";
         } else if (number % 5 == 0) {
             accumulator = "Buzz";
-            return "Buzz";
         } else if (number % 7 == 0) {
             accumulator = "Bazz";
-            return "Bazz";
         } else {
             accumulator = Integer.toString(number);
-            return Integer.toString(number);
         }
+        return accumulator;
     }
 
     public static void main(String[] args) {
