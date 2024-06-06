@@ -26,15 +26,15 @@ public class Hole1FizzBuzz {
     public static String fizzBuzz(int number) {
         String accumulator = "";
         if (number % 15 == 0) {
-            accumulator = "FizzBuzz";
+            accumulator += "FizzBuzz";
         } else if (number % 3 == 0) {
-            accumulator = "Fizz";
+            accumulator += "Fizz";
         } else if (number % 5 == 0) {
-            accumulator = "Buzz";
+            accumulator += "Buzz";
         } else if (number % 7 == 0) {
-            accumulator = "Bazz";
+            accumulator += "Bazz";
         } else {
-            accumulator = Integer.toString(number);
+            accumulator += Integer.toString(number);
         }
         return accumulator;
     }
