@@ -30,6 +30,8 @@ public class Hole1FizzBuzz {
             return "Fizz";
         } else if (number % 5 == 0) {
             return "Buzz";
+        } else if (true) {
+            return Integer.toString(number);
         } else {
             return Integer.toString(number);
         }
